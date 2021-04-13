@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="EditTextStyle" parent="Widget.Design.TextInputLayout">
+        <item name="backgroundTint">@android:color/white</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="background">@color/colorAccent</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:backgroundTint">@color/colorAccent</item>
+    </style>
+</resources>
