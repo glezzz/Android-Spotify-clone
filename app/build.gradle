@@ -2,7 +2,6 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'com.google.gms.google-services'
-    id 'kotlin-android-extensions'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
 }
@@ -17,6 +16,7 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -59,10 +59,20 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore:22.1.2'
     //Dagger - Hilt
     implementation "com.google.dagger:hilt-android:2.31-alpha"
-    kapt "com.google.dagger:hilt-android-compiler:2.28-alpha"
+    kapt "com.google.dagger:hilt-android-compiler:2.31.2-alpha"
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
     kapt "androidx.hilt:hilt-compiler:1.0.0-beta01"
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     kapt 'com.github.bumptech.glide:compiler:4.11.0'
+    // ExoPlayer
+    api "com.google.android.exoplayer:exoplayer-core:2.11.8"
+    api "com.google.android.exoplayer:exoplayer-ui:2.11.8"
+    api "com.google.android.exoplayer:extension-mediasession:2.11.8"
+    // Navigation Component
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"
+    implementation "androidx.navigation:navigation-ui-ktx:2.3.5"
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+
 }
